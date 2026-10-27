@@ -1,0 +1,43 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+  padding: 20px 24px 40px;
+  max-width: 1440px;
+  width: 100%;
+}
+.content:focus {
+  outline: none;
+}
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 25;
+  background: rgb(6 30 30 / 40%);
+}
+.skip {
+  position: absolute;
+  left: 8px;
+  top: -40px;
+  z-index: 100;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--teal-700);
+  color: #fff;
+}
+.skip:focus {
+  top: 8px;
+}
+@media (max-width: 900px) {
+  .content {
+    padding: 16px;
+  }
+}

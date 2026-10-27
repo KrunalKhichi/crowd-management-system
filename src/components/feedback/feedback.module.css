@@ -1,0 +1,53 @@
+.error,
+.errorCompact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--severity-high-bg);
+  color: #7f241d;
+}
+.error {
+  padding: 14px 16px;
+  margin: 12px 16px;
+}
+.errorCompact {
+  padding: 8px 12px;
+}
+.error > button,
+.errorCompact > button {
+  margin-left: auto;
+}
+
+.body {
+  min-width: 0;
+}
+.title {
+  font-weight: 600;
+}
+.message {
+  font-size: 13px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--text-muted);
+}
+.empty .title {
+  color: var(--text-secondary);
+}
+
+.freshness,
+.freshnessStale {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.freshnessStale {
+  color: var(--warning);
+}

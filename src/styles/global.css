@@ -1,0 +1,139 @@
+/* Design tokens (taken from the Figma prototype) and element defaults. Components use CSS Modules. */
+:root {
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --teal-950: #062b2b;
+  --teal-900: #0a3c3b;
+  --teal-800: #0e4f4d;
+  --teal-700: #116461;
+  --teal-600: #137e7a; /* primary actions */
+  --teal-500: #2a948e;
+  --teal-400: #5aafa9;
+  --teal-300: #8ccbc5;
+  --teal-200: #bfe3df;
+  --teal-100: #dff1ef;
+  --teal-50: #f0f8f7;
+
+  --bg: #f3f5f5;
+  --surface: #ffffff;
+  --surface-muted: #f7f9f9;
+  --border: #e2e7e7;
+  --border-strong: #c9d3d3;
+  --text: #1a2120;
+  --text-secondary: #4a5756;
+  --text-muted: #6f7c7b; /* ≥ 4.5:1 on white */
+
+  --chart-occupancy: #2a948e;
+  --chart-male: #3f8f89;
+  --chart-female: #8ccbc5;
+  --chart-grid: #eaefef;
+
+  --positive: #157a52;
+  --negative: #c2362c;
+  --warning: #a86a00;
+  --live: #c0392b;
+
+  --severity-high: #c2362c;
+  --severity-high-bg: #fdecea;
+  --severity-medium: #9a6200;
+  --severity-medium-bg: #fdf3df;
+  --severity-low: #137e7a;
+  --severity-low-bg: #e4f3f1;
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --shadow-card: 0 1px 2px rgb(16 40 40 / 5%);
+  --shadow-pop: 0 12px 32px rgb(10 40 40 / 18%);
+  --focus-ring: 0 0 0 3px rgb(42 148 142 / 35%);
+
+  --sidebar-width: 240px;
+  --sidebar-collapsed: 72px;
+  --header-height: 64px;
+
+  color-scheme: light;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--teal-700);
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal-600);
+  outline-offset: 2px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

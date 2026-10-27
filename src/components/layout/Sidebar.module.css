@@ -1,0 +1,122 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  width: var(--sidebar-width);
+  height: 100vh;
+  padding: 16px 10px;
+  color: #fff;
+  background:
+    linear-gradient(115deg, transparent 47%, rgb(255 255 255 / 5%) 47.2% 47.6%, transparent 47.8%),
+    linear-gradient(65deg, transparent 62%, rgb(255 255 255 / 5%) 62.2% 62.6%, transparent 62.8%),
+    linear-gradient(160deg, transparent 30%, rgb(255 255 255 / 4%) 30.2% 30.5%, transparent 30.7%),
+    radial-gradient(120% 60% at 80% 55%, rgb(42 148 142 / 45%), transparent 70%),
+    linear-gradient(180deg, var(--teal-800) 0%, var(--teal-900) 40%, var(--teal-950) 100%);
+  transition: width 0.2s ease;
+  z-index: 30;
+  overflow: hidden;
+}
+.sidebar[data-collapsed] {
+  width: var(--sidebar-collapsed);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0 20px 6px;
+  min-height: 52px;
+}
+.sidebar[data-collapsed] .top {
+  flex-direction: column;
+}
+.toggle {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: #fff;
+  flex: none;
+}
+.toggle:hover {
+  background: rgb(255 255 255 / 10%);
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--teal-100);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.link:hover {
+  background: rgb(255 255 255 / 8%);
+  color: #fff;
+}
+.active {
+  background: rgb(255 255 255 / 22%);
+  color: #fff;
+  box-shadow: inset 4px 0 0 #fff;
+}
+.link:focus-visible {
+  outline-color: #fff;
+}
+.sidebar[data-collapsed] .label {
+  display: none;
+}
+.sidebar[data-collapsed] .link {
+  justify-content: center;
+  padding: 0;
+}
+.logout {
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .sidebar,
+  .sidebar[data-collapsed] {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(280px, 84vw);
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+    box-shadow: var(--shadow-pop);
+  }
+  .sidebar[data-mobile-open] {
+    transform: none;
+  }
+  .sidebar[data-collapsed] .label {
+    display: inline;
+  }
+  .sidebar[data-collapsed] .link {
+    justify-content: flex-start;
+    padding: 0 12px;
+  }
+  .sidebar[data-collapsed] .top {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,37 @@
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+.group {
+  display: flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  min-width: 0;
+}
+.group > * {
+  flex: 1;
+}
+.divider {
+  flex: 0 0 1px;
+  margin: 16px 0;
+  background: var(--border);
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .wide {
+    flex-direction: column;
+  }
+  .divider {
+    flex-basis: auto;
+    height: 1px;
+    margin: 0 18px;
+  }
+}

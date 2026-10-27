@@ -1,0 +1,71 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 2.6fr;
+  gap: 12px;
+}
+
+.donutFigure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 4px 8px 8px 12px;
+}
+.donutWrap {
+  position: relative;
+  width: 180px;
+  margin: 0 auto;
+}
+.donutCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.donutCenter strong {
+  font-size: 20px;
+  color: var(--text);
+}
+.caption {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.legendList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.legendList li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.legendList strong {
+  color: var(--text);
+}
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex: none;
+}
+.count {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

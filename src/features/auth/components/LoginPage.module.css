@@ -1,0 +1,56 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  /* Stand-in for the design's photographic background: dark, desaturated teal. */
+  background:
+    radial-gradient(1200px 600px at 20% 40%, rgb(42 148 142 / 22%), transparent 60%),
+    linear-gradient(160deg, #2b3534 0%, #1b2322 55%, #121817 100%);
+}
+
+.layout {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 380px);
+  align-items: center;
+  gap: 48px;
+}
+
+.welcome {
+  color: #fff;
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.25;
+  font-weight: 600;
+  padding-left: 8%;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-pop);
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: grid;
+  place-items: center;
+  height: 84px;
+  background:
+    linear-gradient(135deg, transparent 60%, rgb(255 255 255 / 6%) 60% 61%, transparent 61%),
+    linear-gradient(160deg, var(--teal-800), var(--teal-950));
+}
+
+@media (max-width: 820px) {
+  .layout {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 24px;
+  }
+  .welcome {
+    padding-left: 0;
+    text-align: center;
+    font-size: 24px;
+  }
+}

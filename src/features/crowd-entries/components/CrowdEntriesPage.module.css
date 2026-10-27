@@ -1,0 +1,45 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.card {
+  overflow: hidden;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+}
+.summary {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+.summary strong {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sizeLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.sizeSelect {
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.footer {
+  padding: 12px 16px 16px;
+}

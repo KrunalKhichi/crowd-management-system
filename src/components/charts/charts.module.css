@@ -1,0 +1,46 @@
+.tooltip {
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--teal-900);
+  color: #fff;
+  font-size: 12px;
+  box-shadow: var(--shadow-pop);
+}
+.tooltipTitle {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.tooltipRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend {
+  display: flex;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.body {
+  padding: 4px 12px 12px 4px;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 16px 12px;
+}
